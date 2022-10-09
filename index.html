@@ -56,6 +56,22 @@
                          and saves the note when form is submitted -->
                     <!-- Ensure validations are applied to prevent form from 
                         submitting if the inputs are invalid -->
+
+                        <form onsubmit="return saveNote()">
+                            <label for="title">Enter Title</label> 
+                            <br>    
+                        <input type="text"  id="title" placeholder="Enter Your Title"> <span id="usernameSpan" style="color: red;"></span>
+                        <br>
+                        
+                        <label for="content">Enter Content</label>
+                        <br>
+                        <input type="text"  id="content" placeholder="Enter Your Content"> <span id="contentSpan" style="color: red;"></span>
+                        <br>
+                        <br>
+                        <input type="submit" value="Save Note">
+                        </form>
+                      <br><br>
+                      <button onclick="fetchNotes()" id="fetch">Display To do List</button>
                 </div>
             </div>
         </div>
@@ -74,7 +90,7 @@
         crossorigin="anonymous"></script>
 
     <!-- link the script.js file to save and load notes -->
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
